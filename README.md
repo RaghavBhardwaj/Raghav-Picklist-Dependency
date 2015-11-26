@@ -1,26 +1,4 @@
-alfresco-value-assistance
-=========================
 
-Configurable value assistance module for Alfresco Share that allows picklists to be managed using datalists.
-
-Solution presented at Alfresco Summit 2013
-https://www.youtube.com/watch?v=NcYswC0S7To
-
-It starts at 19:00 minutes
-
-This project was first described here http://blog.tsgrp.com/2013/07/10/alfresco-data-list-driven-value-assistance/
-
-It was when I got the source code and changed it to Alfresco SDK project format.
-
-This project tries to reimplement (at least part of) the functionalities shown on this post http://blog.tsgrp.com/2014/12/17/harnessing-the-power-of-alfresco-data-lists-for-cascading-value-assistance/
-
-At the moment, only 2 level dependency is working.
-
-How to use the addon
-====================
-
-Create the properties you need.
-Ex: property1 and property2
 
 	<property name="custom:property1">
 		<title>Property 1</title>
@@ -186,9 +164,3 @@ Into the share-config-custom.xml file, configure your custom type to something l
 	</forms>
 </config>
 
-The value used in the picklistName parameter must be the same as the datalist's name.
-If you create a datalist called "Property 1 Datalist", that's the text you should use as the picklistName parameter.
-
-When creating the datalists, it's required to use of of the types defined by this addon:
-1 Level Value Assistance List - for the first level of dependency
-2 Level Cascading Value Assistance List - for the second level of dependency
