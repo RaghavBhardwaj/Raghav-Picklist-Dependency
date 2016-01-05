@@ -33,6 +33,15 @@ public class ValueAssistanceModel {
 	public static final QName TYPE_2_LEVEL_CASCADING_VALUE_ASSISTANCE_LIST_ITEM = QName
 			.createQName(TSG_VALUE_ASSISTANCE_MODEL_URI,
 					"2LevelCascadingValueAssistanceListItem");
+	public static final QName TYPE_3_LEVEL_CASCADING_VALUE_ASSISTANCE_LIST_ITEM = QName
+			.createQName(TSG_VALUE_ASSISTANCE_MODEL_URI,
+					"3LevelCascadingValueAssistanceListItem");
+	public static final QName TYPE_4_LEVEL_CASCADING_VALUE_ASSISTANCE_LIST_ITEM = QName
+			.createQName(TSG_VALUE_ASSISTANCE_MODEL_URI,
+					"4LevelCascadingValueAssistanceListItem");
+	public static final QName TYPE_5_LEVEL_CASCADING_VALUE_ASSISTANCE_LIST_ITEM = QName
+			.createQName(TSG_VALUE_ASSISTANCE_MODEL_URI,
+					"5LevelCascadingValueAssistanceListItem");
 	
 	public static final QName ASPECT_LEVEL_1 = QName
 			.createQName(TSG_VALUE_ASSISTANCE_MODEL_URI,
@@ -40,7 +49,15 @@ public class ValueAssistanceModel {
 	public static final QName ASPECT_LEVEL_2 = QName
 			.createQName(TSG_VALUE_ASSISTANCE_MODEL_URI,
 					"level2Aspect");
-	
+	public static final QName ASPECT_LEVEL_3 = QName
+			.createQName(TSG_VALUE_ASSISTANCE_MODEL_URI,
+					"level3Aspect");
+	public static final QName ASPECT_LEVEL_4 = QName
+			.createQName(TSG_VALUE_ASSISTANCE_MODEL_URI,
+					"level4Aspect");
+	public static final QName ASPECT_LEVEL_5 = QName
+			.createQName(TSG_VALUE_ASSISTANCE_MODEL_URI,
+					"level5Aspect");
 	public static final QName TYPE_DATALIST = QName.createQName(
 			DATALIST_MODEL_URI, "dataList");
 
@@ -48,9 +65,22 @@ public class ValueAssistanceModel {
 			TSG_VALUE_ASSISTANCE_MODEL_URI, "level1Label");
 	public static final QName PROP_LEVEL_2_LABEL = QName.createQName(
 			TSG_VALUE_ASSISTANCE_MODEL_URI, "level2Label");
-
+	public static final QName PROP_LEVEL_3_LABEL = QName.createQName(
+			TSG_VALUE_ASSISTANCE_MODEL_URI, "level3Label");
+	public static final QName PROP_LEVEL_4_LABEL = QName.createQName(
+			TSG_VALUE_ASSISTANCE_MODEL_URI, "level4Label");
+	public static final QName PROP_LEVEL_5_LABEL = QName.createQName(
+			TSG_VALUE_ASSISTANCE_MODEL_URI, "level5Label");
 	public static final QName PROP_LEVEL_1_VALUE = QName.createQName(
 			TSG_VALUE_ASSISTANCE_MODEL_URI, "level1Value");
 	public static final QName PROP_LEVEL_2_VALUE = QName.createQName(
 			TSG_VALUE_ASSISTANCE_MODEL_URI, "level2Value");
+	public static final QName PROP_LEVEL_3_VALUE = QName.createQName(
+			TSG_VALUE_ASSISTANCE_MODEL_URI, "level3Value");
+	public static final QName PROP_LEVEL_4_VALUE = QName.createQName(
+			TSG_VALUE_ASSISTANCE_MODEL_URI, "level4Value");
+	public static final QName PROP_LEVEL_5_VALUE = QName.createQName(
+			TSG_VALUE_ASSISTANCE_MODEL_URI, "level5Value");
+
+
 }

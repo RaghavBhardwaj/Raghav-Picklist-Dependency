@@ -34,6 +34,48 @@
 				<aspect>va:level2Aspect</aspect>
 			</mandatory-aspects>
 		</type>
+		
+				<type name="va:3LevelCascadingValueAssistanceListItem">
+			<title>3 Level Cascading Value Assistance List</title>
+			<parent>dl:dataListItem</parent>
+			<archive>false</archive>
+			<mandatory-aspects>
+ 				<aspect>va:level2Aspect</aspect>
+ 				 				<aspect>va:level3Aspect</aspect>
+ 				
+			</mandatory-aspects>
+		</type>
+		
+		
+				<type name="va:4LevelCascadingValueAssistanceListItem">
+			<title>4 Level Cascading Value Assistance List</title>
+			<parent>dl:dataListItem</parent>
+			<archive>false</archive>
+			<mandatory-aspects>
+ 				<aspect>va:level3Aspect</aspect>
+ 				 				<aspect>va:level4Aspect</aspect>
+ 				
+			</mandatory-aspects>
+		</type>
+		
+				<type name="va:5LevelCascadingValueAssistanceListItem">
+			<title>5 Level Cascading Value Assistance List</title>
+			<parent>dl:dataListItem</parent>
+			<archive>false</archive>
+			<mandatory-aspects>
+ 				<aspect>va:level4Aspect</aspect>
+ 				 				<aspect>va:level5Aspect</aspect>
+ 				
+			</mandatory-aspects>
+		</type>
+		
+		
+		
+		
+		
+		
+		
+		
 	</types>
 
 	<aspects>
@@ -79,5 +121,87 @@
 				</property>
 			</properties>
 		</aspect>
+		
+		<aspect name="va:level3Aspect">
+			<title>Level 3 Aspect</title>
+			<properties>
+				<property name="va:level3Label">
+					<title>Level 3 Label</title>
+					<type>d:text</type>
+					<multiple>false</multiple>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				<property name="va:level3Value">
+					<title>Level 3 Value</title>
+					<type>d:text</type>
+					<multiple>false</multiple>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+		
+		
+		
+				<aspect name="va:level4Aspect">
+			<title>Level 4 Aspect</title>
+			<properties>
+				<property name="va:level4Label">
+					<title>Level 4 Label</title>
+					<type>d:text</type>
+					<multiple>false</multiple>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				<property name="va:level4Value">
+					<title>Level 4 Value</title>
+					<type>d:text</type>
+					<multiple>false</multiple>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+		
+				<aspect name="va:level5Aspect">
+			<title>Level 5 Aspect</title>
+			<properties>
+				<property name="va:level5Label">
+					<title>Level 5 Label</title>
+					<type>d:text</type>
+					<multiple>false</multiple>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				<property name="va:level5Value">
+					<title>Level 5 Value</title>
+					<type>d:text</type>
+					<multiple>false</multiple>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	</aspects>
 </model>

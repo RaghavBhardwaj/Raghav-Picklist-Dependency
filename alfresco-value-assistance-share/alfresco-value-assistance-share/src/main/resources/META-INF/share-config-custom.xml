@@ -1,13 +1,31 @@
 <alfresco-config>
+	<!-- Introduction of new namespaces defined by this model -->
+	<namespaces>
+		<namespace uri="http://www.eisenvault.net/model/content/1.0"
+			prefix="ev" />
+	</namespaces>
 
+	<!-- Document Library config section -->
 	<config evaluator="string-compare" condition="DocumentLibrary">
-		<aspects>
+		<types>
+			<type name="cm:content">
+				<subtype name="ev:document" />
+				<!-- content added by Vipul Swarup - 20 Nov 2015- to display -->
+				<subtype name="ev:ev:goyalMarketingDocument" />
+			</type>
+		</types>
+
+<!-- ASpects added by Raghav Bhardwaj for value assistance on 27-11-15   -->
+<aspects>
 			<visible>
 				<aspect name="dm:demo" />
 				<aspect name="dm:demoCascading2Level" />
 			</visible>
 		</aspects>
 	</config>
+
+
+<!-- Added by Raghav Bhardwaj on 27-11-15 for value assistance  -->
 
 	<config>
 		<forms>
@@ -134,6 +152,285 @@
 		</forms>
 	</config>
 
+	<config evaluator="node-type" condition="va:3LevelCascadingValueAssistanceListItem">
+		<forms>
+			<form>
+			<field-visibility>
+					<show id="va:level1Value" />
+					<show id="va:level1Label" />
+					<show id="va:level2Value" />
+					<show id="va:level2Label" />
+						<show id="va:level3Value" />
+					<show id="va:level3Label" />
+				</field-visibility>
+				<appearance>
+					<field id="va:level1Value">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level1Label">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level2Value">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level2Label">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					
+					<field id="va:level3Value">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level3Label">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					
+					
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+	<config evaluator="model-type" condition="va:3LevelCascadingValueAssistanceListItem">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="va:level1Value" />
+					<show id="va:level1Label" />
+					<show id="va:level2Value" />
+					<show id="va:level2Label" />
+						<show id="va:level3Value" />
+					<show id="va:level3Label" />
+				</field-visibility>
+				<appearance>
+					<field id="va:level1Value">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level1Label">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level2Value">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level2Label">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					
+					<field id="va:level3Value">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level3Label">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+									</appearance>
+									</form>
+									</forms>
+					</config>
+					
+					
+					
+	
+
+	<config evaluator="model-type" condition="va:4LevelCascadingValueAssistanceListItem">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="va:level1Value" />
+					<show id="va:level1Label" />
+					<show id="va:level2Value" />
+					<show id="va:level2Label" />
+						<show id="va:level3Value" />
+					<show id="va:level3Label" />
+					<show id="va:level4Value" />
+					<show id="va:level4Label" />
+				</field-visibility>
+				<appearance>
+					<field id="va:level1Value">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level1Label">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level2Value">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level2Label">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					
+					<field id="va:level3Value">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level3Label">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					
+					
+						
+					<field id="va:level4Value">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level4Label">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+
+
+
+
+
+
+
+
+
+<config evaluator="node-type" condition="va:5LevelCascadingValueAssistanceListItem">
+		<forms>
+			<form>
+			<field-visibility>
+					<show id="va:level1Value" />
+					<show id="va:level1Label" />
+					<show id="va:level2Value" />
+					<show id="va:level2Label" />
+						<show id="va:level3Value" />
+					<show id="va:level3Label" />
+					
+						<show id="va:level4Value" />
+					<show id="va:level4Label" />
+					<show id="va:level5Value" />
+					<show id="va:level5Label" />
+				</field-visibility>
+				<appearance>
+					<field id="va:level1Value">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level1Label">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level2Value">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level2Label">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					
+					<field id="va:level3Value">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level3Label">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+						
+					<field id="va:level4Value">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level4Label">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+							
+					<field id="va:level5Value">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="va:level5Label">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					
+					
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<config evaluator="aspect" condition="dm:demo">
 		<forms>
 			<form>
@@ -195,4 +492,603 @@
 		</forms>
 	</config>
 
+
+
+
+	<!-- Search config section -->
+	<config replace="true" evaluator="string-compare" condition="AdvancedSearch">
+		<advanced-search>
+			<!-- Forms for the advanced search type list -->
+			<forms>
+				<form labelId="search.form.label.cm_content" descriptionId="search.form.desc.cm_content">cm:content
+				</form>
+				<form labelId="search.form.label.cm_folder" descriptionId="search.form.desc.cm_folder">cm:folder
+				</form>
+				<form labelId="type.evGoyalMarketingDocument" description="Search for Marketing Documents">ev:goyalMarketingDocument</form>
+			</forms>
+		</advanced-search>
+	</config>
+
+	<!-- Removing "Manage Aspects" options & adding custom OCR action - Vipul 
+		Swarup 25/09/2015 -->
+	<config evaluator="string-compare" condition="DocLibActions">
+		<actions>
+			<action id="document-manage-aspects">
+				<evaluator>evaluator.doclib.action.disableAction</evaluator>
+			</action>
+
+
+			<action id="ev-ocr-english" type="javascript" label="actions.ev.ocr-english"
+				icon="ocr-icon">
+
+
+				<param name="function">waitmessageDialog</param>
+				<permissions>
+					<permission allow="true">Write</permission>
+				</permissions>
+				<param name="action">English-OCR</param>
+				<param name="successMessage">message.ev.ocr-success</param>
+				<param name="failureMessage">message.ev.ocr-failure</param>
+				<!-- Show/Hide action on basis of MimeType added by Raghav Bhardwaj 26/10/2015 -->
+
+				<evaluator>evaluator.doclib.action.oEditMimetype</evaluator>
+
+			</action>
+			<action id="ev-ocr-hindi" type="javascript" label="actions.ev.ocr-hindi"
+				icon="ocr-icon">
+
+
+				<param name="function">waitmessageDialog</param>
+				<permissions>
+					<permission allow="true">Write</permission>
+				</permissions>
+				<param name="action">Hindi-OCR</param>
+				<param name="successMessage">message.ev.ocr-success</param>
+				<param name="failureMessage">message.ev.ocr-failure</param>
+				<!-- Show/Hide action on basis of MimeType added by Raghav Bhardwaj 26/10/2015 -->
+
+				<evaluator>evaluator.doclib.action.oEditMimetype</evaluator>
+
+			</action>
+			<action id="ev-ocr-bengali" type="javascript" label="actions.ev.ocr-bengali"
+				icon="ocr-icon">
+
+
+
+				<param name="function">waitmessageDialog</param>
+				<permissions>
+					<permission allow="true">Write</permission>
+				</permissions>
+				<param name="action">Bengali-OCR</param>
+				<param name="successMessage">message.ev.ocr-success</param>
+				<param name="failureMessage">message.ev.ocr-failure</param>
+				<!-- Show/Hide action on basis of MimeType added by Raghav Bhardwaj 26/10/2015 -->
+
+				<evaluator>evaluator.doclib.action.oEditMimetype</evaluator>
+
+			</action>
+			<!-- Audit trail action id and action group entries added by Raghav Bhardwaj 
+				on 03-11-15 -->
+
+			<action id="document-call-ws" type="pagelink" label="actions.document.call-ws">
+				<param name="page">hdp/ws/list-auditdata?nodeRef={node.nodeRef}
+				</param>
+			</action>
+
+
+		</actions>
+		<actionGroups>
+			<actionGroup id="document-browse">
+				<action index="500" id="ev-ocr-english" />
+				<action index="510" id="ev-ocr-hindi" />
+				<action index="520" id="ev-ocr-bengali" />
+
+				<action index="600" id="document-call-ws" />
+
+			</actionGroup>
+			<actionGroup id="document-details">
+				<action index="500" id="ev-ocr-english" />
+				<action index="510" id="ev-ocr-hindi" />
+				<action index="520" id="ev-ocr-bengali" />
+
+				<action index="600" id="document-call-ws" />
+
+			</actionGroup>
+
+		</actionGroups>
+	</config>
+
+
+	<config evaluator="string-compare" condition="DocLibCustom">
+		<dependencies>
+			<js src="components/documentlibrary/ev-wait-action.js" />
+		</dependencies>
+	</config>
+	<config evaluator="string-compare" condition="Remote">
+		<remote>
+			<endpoint>
+				<id>alfresco-noauth</id>
+				<name>Alfresco - unauthenticated access</name>
+				<description>Access to Alfresco Repository WebScripts that do not
+					require authentication</description>
+				<connector-id>alfresco</connector-id>
+				<endpoint-url>http://localhost:8080/alfresco/s</endpoint-url>
+				<identity>none</identity>
+			</endpoint>
+
+			<endpoint>
+				<id>alfresco</id>
+				<name>Alfresco - user access</name>
+				<description>Access to Alfresco Repository WebScripts that require
+					user authentication</description>
+				<connector-id>alfresco</connector-id>
+				<endpoint-url>http://localhost:8080/alfresco/s</endpoint-url>
+				<identity>user</identity>
+			</endpoint>
+
+			<endpoint>
+				<id>alfresco-feed</id>
+				<name>Alfresco Feed</name>
+				<description>Alfresco Feed - supports basic HTTP authentication via
+					the EndPointProxyServlet</description>
+				<connector-id>http</connector-id>
+				<endpoint-url>http://localhost:8080/alfresco/s</endpoint-url>
+				<basic-auth>true</basic-auth>
+				<identity>user</identity>
+			</endpoint>
+		</remote>
+	</config>
+	
+	<!-- Added by Sujay for PredictiveTextDropDown changes on 17/11/2015 -->
+	<config>
+		<forms>
+			<dependencies>
+				<js src="/js/dependent-control.js" />
+				<js src="/js/dynamic-dropdown.js" />
+			</dependencies>
+		</forms>
+	</config>
+	<config evaluator="model-type" condition="cdl:customerListItem">
+		<forms>
+			<form>
+				<field-visibility>
+                    <show id="myc:customer" />
+					
+					<show id="cm:name" />
+					
+					<show id="cdl:value" />
+					<show id="cdl:sortOrder" />
+				</field-visibility>
+				<appearance>
+				   <field id="cm:name">
+                      <control>
+                         <control-param name="maxLength">255</control-param>
+                 	  </control>
+               	   </field>
+				   <field id="cdl:value">
+                      <control>
+                         <control-param name="maxLength">255</control-param>
+                 	  </control>
+               	   </field>	
+               	    <field id="myc:customer">
+                      <control>
+							<control template="/form-controls/selectone-customer.ftl" />
+                 	  </control>
+               	   </field>					
+               	</appearance>
+			</form>
+		</forms>
+	</config>
+		<config evaluator="aspect" condition="myc:test">
+		<forms>
+			<form>
+				<field-visibility>
+					<show id="myc:customer" />
+				</field-visibility>
+				<appearance>
+					<set id="general" appearance="bordered-panel" label="Customer" />
+					<field id="myc:customer" set="general">
+						<control template="/form-controls/selectone-customer.ftl">
+							<control-param name="picklistName">CustomerList</control-param>
+							<control-param name="level">1</control-param>
+                    		<control-param name="loadLabel">true</control-param>
+						</control>
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	<config>
+		<forms>
+			<constraint-handlers>
+				<constraint type="MANDATORY" validation-handler="Alfresco.forms.validation.mandatory"
+					event="keyup,propertychange,change" />
+			</constraint-handlers>
+		</forms>
+	</config>
+	
+	
+	<config evaluator="model-type" condition="ev:goyalMarketingDocument">
+		<forms>
+			<!-- Default form configuration for the ev:goyalMarketingDocument type -->
+			<form>
+				<field-visibility>
+										<show id="cm:title" force="true" />
+					
+					<show id="ev:goyalMarketingDocumentType" />
+										<show id="ev:goyalCustomerType" />
+					
+					<!-- ev:document -->
+				
+					<!-- ev:goyalMarketingDocument -->
+					<show id="ev:goyalCustomerCountry" />
+					<show id="ev:goyalCustomerState" />
+					<show id="ev:goyalCustomerCity" />
+					<show id="ev:goyalCustomerAddress" />
+				     <show id="ev:goyalCustomerName" />
+					<show id="ev:goyalCustomerID" />
+					<show id="ev:goyalSerialNumber" />
+						
+						
+					<show id="ev:dateOfCreation" />
+					<show id="ev:monthOfCreation" />
+					<show id="ev:yearOfCreation" />
+					<show id="ev:goyalBranchRepresentativeName" />
+					<show id="cm:name" />
+										<show id="cm:description" force="true" />
+					
+					<show id="mimetype" />
+					<show id="cm:author" force="true" />
+					<show id="size" for-mode="view" />
+					<show id="cm:creator" for-mode="view" />
+					<show id="cm:created" for-mode="view" />
+					<show id="cm:modifier" for-mode="view" />
+					<show id="cm:modified" for-mode="view" />
+
+					<!-- tags and categories -->
+					<show id="cm:taggable" for-mode="edit" force="true" />
+					<show id="cm:categories" />
+
+					<!-- cm:summarizable aspect -->
+					<show id="cm:summary" />
+
+					<!-- cm:translatable aspect -->
+					<show id="cm:translations" />
+
+					<!-- cm:localizable aspect -->
+					<show id="cm:locale" />
+
+					<!-- cm:ownable aspect -->
+					<show id="cm:owner" />
+
+					<!-- cm:attachable aspect -->
+					<show id="cm:attachments" />
+
+					<!-- cm:indexControl aspect -->
+					<show id="cm:isIndexed" />
+					<show id="cm:isContentIndexed" />
+				</field-visibility>
+
+				<appearance>
+					<field id="cm:name">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:description">
+						<control>
+							<control-param name="activateLinks">true</control-param>
+						</control>
+					</field>
+					<!-- EV Doc Properties -->
+					<field id="ev:dateOfCreation" label="Document Date">
+						<control>
+							<control template="/org/alfresco/components/form/controls/date.ftl" />
+						</control>
+					</field>
+					<field id="ev:yearOfCreation" label="Document Year">
+						<control>
+							<control-param name="maxLength">4</control-param>
+						</control>
+					</field>
+					<field id="ev:monthOfCreation" label="Document Month">
+						<control>
+							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+						</control>
+					</field>
+					<field id="ev:goyalMarketingDocumentType" label="Type of Marketing Document">
+						<control>
+							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+						</control>
+					</field>
+
+					<field id="ev:goyalCustomerType" label="Type of Customer">
+						<control>
+							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+						</control>
+					</field>
+					<field id="ev:goyalCustomerCountry" label="Customer Address - Country">
+						  <control template="/form-controls/dynamic-dropdown.ftl">
+                    <control-param name="picklistName">Country Datalist</control-param>
+                    <control-param name="level">1</control-param>
+                    <control-param name="loadLabel">true</control-param>
+                </control>
+					</field>
+					<field id="ev:goyalCustomerState" label="Customer Address - State">
+						    <control template="/form-controls/dynamic-dropdown.ftl">
+                    <control-param name="picklistName">State Datalist</control-param>
+                    <control-param name="level">2</control-param>
+                    <control-param name="dependsOn">prop_ev_goyalCustomerCountry
+                    </control-param>
+                    <control-param name="loadLabel">true</control-param>
+                </control>
+					</field>
+					<field id="ev:goyalCustomerCity" label="Customer Address - City">
+						    <control template="/form-controls/dynamic-dropdown.ftl">
+                    <control-param name="picklistName">City Datalist</control-param>
+                    <control-param name="level">3</control-param>
+                    <control-param name="dependsOn">prop_ev_goyalCustomerState
+                    </control-param>
+                    <control-param name="loadLabel">true</control-param>
+                </control>
+					</field>
+					
+					<field id="ev:goyalCustomerName" label="Customer Name">
+						    <control template="/form-controls/dynamic-dropdown.ftl">
+                    <control-param name="picklistName">CustomerName Datalist</control-param>
+                    <control-param name="level">4</control-param>
+                    <control-param name="dependsOn">prop_ev_goyalCustomerCity
+                    </control-param>
+                    <control-param name="loadLabel">true</control-param>
+                </control>
+					</field>
+					
+					
+					
+					
+					
+					
+					<field id="ev:goyalCustomerAddress" label="Customer Address - Street Address">
+						<control>
+							<control-param name="maxLength">512</control-param>
+						</control>
+					</field>
+					<field id="ev:goyalCustomerID" label="Customer ID Number">
+						<control>
+							<control-param name="maxLength">6</control-param>
+						</control>
+					</field>
+					<field id="ev:goyalSerialNumber" label="EisenVault Customer Serial Number">
+						<control>
+							<control-param name="maxLength">6</control-param>
+						</control>
+					</field>
+					<field id="ev:goyalBranchRepresentativeName" label="Branch or Representative Name">
+						<control>
+							<control-param name="maxLength">128</control-param>
+						</control>
+					</field>
+
+					<!-- END EV Props -->
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/mimetype.ftl" />
+					</field>
+					<field id="size">
+						<control template="/org/alfresco/components/form/controls/size.ftl" />
+					</field>
+					<field id="cm:taggable">
+						<control>
+							<control-param name="compactMode">true</control-param>
+							<control-param name="params">aspect=cm:taggable
+							</control-param>
+							<control-param name="createNewItemUri">/api/tag/workspace/SpacesStore
+							</control-param>
+							<control-param name="createNewItemIcon">tag</control-param>
+						</control>
+					</field>
+					<field id="cm:categories">
+						<control>
+							<control-param name="compactMode">true</control-param>
+						</control>
+					</field>
+					<field id="cm:originator" read-only="true" />
+					<field id="cm:addressee" read-only="true" />
+					<field id="cm:addressees" read-only="true" />
+					<field id="cm:sentdate" read-only="true" />
+					<field id="cm:subjectline" read-only="true" />
+				</appearance>
+			</form>
+
+			<!-- Document Library pop-up Edit Metadata form -->
+			<form id="doclib-simple-metadata">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<!-- tags and categories -->
+					<show id="cm:taggable" for-mode="edit" force="true" />
+					<show id="cm:categories" />
+				</field-visibility>
+				<edit-form template="../documentlibrary/forms/doclib-simple-metadata.ftl" />
+				<appearance>
+					<field id="cm:name">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:description">
+						<control>
+							<control-param name="activateLinks">true</control-param>
+						</control>
+					</field>
+					<field id="cm:taggable">
+						<control>
+							<control-param name="compactMode">true</control-param>
+							<control-param name="params">aspect=cm:taggable
+							</control-param>
+							<control-param name="createNewItemUri">/api/tag/workspace/SpacesStore
+							</control-param>
+							<control-param name="createNewItemIcon">tag</control-param>
+						</control>
+					</field>
+					<field id="cm:categories">
+						 <control template="/form-controls/dynamic-dropdown.ftl">
+                    <control-param name="picklistName">State Datalist</control-param>
+                    <control-param name="level">2</control-param>
+                    <control-param name="dependsOn">prop_ev_goyalCustomerCountry
+                    </control-param>
+                    <control-param name="loadLabel">true</control-param>
+                </control>
+					</field>
+				</appearance>
+			</form>
+
+			<!-- Document Library Inline Edit form -->
+			<form id="doclib-inline-edit">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:content" force="true" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+				</field-visibility>
+				<appearance>
+					<field id="cm:name">
+						<control>
+							<control-param name="maxLength">255</control-param>
+						</control>
+					</field>
+					<field id="cm:title">
+						<control template="/org/alfresco/components/form/controls/textfield.ftl" />
+					</field>
+					<field id="cm:content" label-id="">
+						<control>
+							<control-param name="editorAppearance">explorer</control-param>
+							<control-param name="forceEditor">true</control-param>
+						</control>
+					</field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+
+	<!-- ev:doc type (new nodes) -->
+	<config evaluator="model-type" condition="ev:doc">
+		<forms>
+			<!-- Search form -->
+			<form id="search">
+				<field-visibility>
+					<show id="cm:name" />
+					<show id="cm:title" force="true" />
+					<show id="cm:description" force="true" />
+					<show id="mimetype" />
+					<show id="cm:modified" />
+					<show id="cm:modifier" />
+					<!-- ev:document -->
+					<show id="ev:dateOfCreation" />
+					<show id="ev:monthOfCreation" />
+					<show id="ev:yearOfCreation" />
+					<!-- ev:goyalMarketingDocument -->
+					<show id="ev:goyalMarketingDocumentType" />
+					<show id="ev:goyalCustomerType" />
+					<show id="ev:goyalCustomerCountry" />
+					<show id="ev:goyalCustomerState" />
+					<show id="ev:goyalCustomerCity" />
+					<show id="ev:goyalCustomerAddress" />
+					<show id="ev:goyalCustomerID" />
+					<show id="ev:goyalSerialNumber" />
+					<show id="ev:goyalBranchRepresentativeName" />
+				</field-visibility>
+				<appearance>
+					<field id="mimetype">
+						<control template="/org/alfresco/components/form/controls/mimetype.ftl" />
+					</field>
+					<field id="cm:modifier">
+						<control>
+							<control-param name="forceEditable">true</control-param>
+						</control>
+					</field>
+					<field id="cm:modified">
+						<control template="/org/alfresco/components/form/controls/daterange.ftl" />
+					</field>
+					<!-- EV Doc Properties -->
+					<field id="ev:dateOfCreation" label="Document Date">
+						<control>
+							<control template="/org/alfresco/components/form/controls/date.ftl" />
+						</control>
+					</field>
+					<field id="ev:yearOfCreation" label="Document Year">
+						<control>
+							<control-param name="maxLength">4</control-param>
+						</control>
+					</field>
+					<field id="ev:monthOfCreation" label="Document Month">
+						<control>
+							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+						</control>
+					</field>
+					<field id="ev:goyalMarketingDocumentType" label="Type of Marketing Document">
+						<control>
+							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+						</control>
+					</field>
+
+					<field id="ev:goyalCustomerType" label="Type of Customer">
+						<control>
+							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+						</control>
+					</field>
+					<field id="ev:goyalCustomerCountry" label="Customer Address - Country">
+					  <control template="/form-controls/dynamic-dropdown.ftl">
+                    <control-param name="picklistName">Country Datalist</control-param>
+                    <control-param name="level">1</control-param>
+                    <control-param name="loadLabel">true</control-param>
+                </control>
+					</field>
+					<field id="ev:goyalCustomerState" label="Customer Address - State">
+						<control>
+							<control template="/org/alfresco/components/form/controls/selectone.ftl" />
+						</control>
+					</field>
+					<field id="ev:goyalCustomerCity" label="Customer Address - City">
+						<control>
+							<control-param name="maxLength">128</control-param>
+						</control>
+					</field>
+					<field id="ev:goyalCustomerAddress" label="Customer Address - Street Address">
+						<control>
+							<control-param name="maxLength">512</control-param>
+						</control>
+					</field>
+					<field id="ev:goyalCustomerID" label="Customer ID Number">
+						<control>
+							<control-param name="maxLength">6</control-param>
+						</control>
+					</field>
+					<field id="ev:goyalSerialNumber" label="EisenVault Customer Serial Number">
+						<control>
+							<control-param name="maxLength">6</control-param>
+						</control>
+					</field>
+					<field id="ev:goyalBranchRepresentativeName" label="Branch or Representative Name">
+						<control>
+							<control-param name="maxLength">128</control-param>
+						</control>
+					</field>
+
+					<!-- END EV Props -->
+				</appearance>
+			</form>
+		</forms>
+	</config>
+	
+	
+	
+	
+	
 </alfresco-config>

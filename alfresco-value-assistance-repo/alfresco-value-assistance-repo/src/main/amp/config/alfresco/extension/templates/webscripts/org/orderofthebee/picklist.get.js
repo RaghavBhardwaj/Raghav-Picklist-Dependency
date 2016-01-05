@@ -62,6 +62,31 @@ function main() {
 	case 2:
 		valueParameter = "level1";
 		break;
+	
+	case 3:
+		valueParameter = "level2";
+		break;
+		
+
+	case 4:
+		valueParameter = "level3";
+		break;
+		
+		
+		
+
+	case 5:
+		valueParameter = "level4";
+		break;
+				
+
+	case 6:
+		valueParameter = "level5";
+		break;	
+		
+		
+		
+		
 	default:
 		break;
 	}
@@ -123,6 +148,41 @@ function getPickListItems(pickListName, pickListLevel, includeBlankItem,
 			labelProperty = "va:level2Label";
 			filterProperty = "va:level1Value";
 			break;
+		case 3:
+			pickListItemsQuery = pickListItemsQuery
+					+ " AND ASPECT:\"va:level3Aspect\"";
+			valueProperty = "va:level3Value";
+			labelProperty = "va:level3Label";
+			filterProperty = "va:level2Value";
+			break;
+			
+		case 4:
+			pickListItemsQuery = pickListItemsQuery
+					+ " AND ASPECT:\"va:level4Aspect\"";
+			valueProperty = "va:level4Value";
+			labelProperty = "va:level4Label";
+			filterProperty = "va:level3Value";
+			break;
+			
+			
+			
+		case 5:
+			pickListItemsQuery = pickListItemsQuery
+					+ " AND ASPECT:\"va:level5Aspect\"";
+			valueProperty = "va:level5Value";
+			labelProperty = "va:level5Label";
+			filterProperty = "va:level4Value";
+			break;
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		default:
 			break;
 		}

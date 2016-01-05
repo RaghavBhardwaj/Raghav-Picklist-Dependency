@@ -66,6 +66,38 @@
 						<tokenised>false</tokenised>
 					</index>
 				</property>
+				
+					<property name="dm:tea">
+					<title>Color</title>
+					<type>d:text</type>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				
+				
+				
+				
+					<property name="dm:sugar">
+					<title>Color</title>
+					<type>d:text</type>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				
+					
+					<property name="dm:milk">
+					<title>Color</title>
+					<type>d:text</type>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				
+				
+				
+				
 			</properties>
 		</aspect>
 		
@@ -81,6 +113,27 @@
 				</property>
 				<property name="dm:level2">
 					<title>Level 2</title>
+					<type>d:text</type>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+						<property name="dm:level3">
+					<title>Level 3</title>
+					<type>d:text</type>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				<property name="dm:level4">
+					<title>Level 4</title>
+					<type>d:text</type>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+					<property name="dm:level5">
+					<title>Level 5</title>
 					<type>d:text</type>
 					<index enabled="true">
 						<tokenised>false</tokenised>

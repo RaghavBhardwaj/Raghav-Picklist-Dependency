@@ -13,6 +13,8 @@
             <list>
                 <value>alfresco/module/${project.artifactId}/model/demoModel.xml</value>
                 <value>alfresco/module/${project.artifactId}/model/valueAssistanceModel.xml</value>
+                <value>alfresco/module/${project.artifactId}/model/evContentModel.xml</value>
+          
             </list>
         </property>
     </bean>

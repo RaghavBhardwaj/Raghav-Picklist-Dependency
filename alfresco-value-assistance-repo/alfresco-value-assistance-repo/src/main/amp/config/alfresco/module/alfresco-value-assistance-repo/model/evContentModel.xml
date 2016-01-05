@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Definition of new Model -->
+
+<!-- The important part here is the name - Note: the use of the ev: namespace 
+	which is defined further on in the document -->
+<model name="ev:evdocmodel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+
+	<!-- Optional meta-data about the model -->
+	<description>EisenVault Document Model</description>
+	<author>EisenVault DMS Team</author>
+	<version>1.0</version>
+
+	<!-- Imports are required to allow references to definitions in other models -->
+
+	<imports>
+		<!-- Import Alfresco Dictionary Definitions -->
+		<import uri="http://www.alfresco.org/model/dictionary/1.0"
+			prefix="d" />
+		<!-- Import Alfresco Content Domain Model Definitions -->
+		<import uri="http://www.alfresco.org/model/content/1.0" prefix="cm" />
+	</imports>
+
+	<!-- Introduction of new namespaces defined by this model -->
+	<namespaces>
+		<namespace uri="http://www.eisenvault.net/model/content/1.0"
+			prefix="ev" />
+	</namespaces>
+
+
+	<constraints>
+		<constraint name="ev:alphaNumericConstraint" type="REGEX">
+			<parameter name="expression">
+				<value>[a-zA-Z0-9]*</value>
+			</parameter>
+			<parameter name="requiresMatch">
+				<value>true</value>
+			</parameter>
+		</constraint>
+		<!-- below constraint ensures that a 4 digit value is being entered -->
+		
+		
+		
+			<constraint name="ev:dateConstraint" type="REGEX">
+			<parameter name="expression">
+				<value>^(3[01]|[12][0-9]|[1-9])$</value>
+			</parameter>
+			<parameter name="requiresMatch">
+				<value>true</value>
+			</parameter>
+		</constraint>
+		
+		
+		
+		
+		
+		
+		
+		
+		<constraint name="ev:yearConstraint" type="LENGTH">
+			<parameter name="minLength">
+				<value>4</value>
+			</parameter>
+			<parameter name="maxLength">
+				<value>4</value>
+			</parameter>
+		</constraint>
+
+		<constraint name="ev:maxLengthOfSixConstraint" type="LENGTH">
+			<parameter name="minLength">
+				<value>0</value>
+			</parameter>
+			<parameter name="maxLength">
+				<value>6</value>
+			</parameter>
+		</constraint>
+		<constraint name="ev:maxLengthOfTwelveConstraint" type="LENGTH">
+			<parameter name="minLength">
+				<value>0</value>
+			</parameter>
+			<parameter name="maxLength">
+				<value>12</value>
+			</parameter>
+		</constraint>
+		<constraint name="ev:maxLengthOfOneTwentyEightConstraint"
+			type="LENGTH">
+			<parameter name="minLength">
+				<value>0</value>
+			</parameter>
+			<parameter name="maxLength">
+				<value>128</value>
+			</parameter>
+		</constraint>
+
+		<constraint name="ev:listOfStatesConstraint" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value>Andaman and Nicobar Islands</value>
+					<value>Andhra Pradesh</value>
+					<value>Arunachal Pradesh</value>
+					<value>Assam</value>
+					<value>Bihar</value>
+					<value>Chandigarh</value>
+					<value>Chhattisgarh</value>
+					<value>Dadra and Nagar Haveli</value>
+					<value>Daman and Diu</value>
+					<value>Delhi</value>
+					<value>Goa</value>
+					<value>Gujarat</value>
+					<value>Haryana</value>
+					<value>Himachal Pradesh</value>
+					<value>Jammu and Kashmir</value>
+					<value>Jharkhand</value>
+					<value>Karnataka</value>
+					<value>Kerala</value>
+					<value>Lakshadweep</value>
+					<value>Madhya Pradesh</value>
+					<value>Maharashtra</value>
+					<value>Manipur</value>
+					<value>Meghalaya</value>
+					<value>Mizoram</value>
+					<value>Nagaland</value>
+					<value>Odisha</value>
+					<value>Puducherry</value>
+					<value>Punjab</value>
+					<value>Rajasthan</value>
+					<value>Sikkim</value>
+					<value>Tamil Nadu</value>
+					<value>Telangana</value>
+					<value>Tripura</value>
+					<value>Uttar Pradesh</value>
+					<value>Uttarakhand</value>
+					<value>West Bengal</value>
+					<value>Not in India</value>
+				</list>
+			</parameter>
+		</constraint>
+
+		<constraint name="ev:nameOfMonthConstraint" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value>January</value>
+					<value>February</value>
+					<value>March</value>
+					<value>April</value>
+					<value>May</value>
+					<value>June</value>
+					<value>July</value>
+					<value>August</value>
+					<value>September</value>
+					<value>October</value>
+					<value>November</value>
+					<value>December</value>
+				</list>
+			</parameter>
+		</constraint>
+		<constraint name="ev:goyalMarketingDocumentTypes" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value>Branch or Representative File</value>
+					<value>Credit Note</value>
+					<value>Customer Order</value>
+					<value>G.R.</value>
+					<value>Invoice</value>
+					<value>Miscellaneous Correspondence</value>
+					<value>Quotation</value>
+					<value>Terms and Conditions Letter</value>
+				</list>
+			</parameter>
+		</constraint>
+		<constraint name="ev:goyalCustomerTypes" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value>Book Seller</value>
+					<value>School</value>
+				</list>
+			</parameter>
+		</constraint>
+
+		<constraint name="ev:nameOfCountryConstraint" type="LIST">
+			<parameter name="allowedValues">
+				<list>
+					<value>India</value>
+					<value>Afghanistan</value>
+					<value>Albania</value>
+					<value>Algeria</value>
+					<value>Andorra</value>
+					<value>Angola</value>
+					<value>Antigua and Barbuda</value>
+					<value>Argentina</value>
+					<value>Armenia</value>
+					<value>Aruba</value>
+					<value>Australia</value>
+					<value>Austria</value>
+					<value>Azerbaijan</value>
+					<value>Bahamas, The</value>
+					<value>Bahrain</value>
+					<value>Bangladesh</value>
+					<value>Barbados</value>
+					<value>Belarus</value>
+					<value>Belgium</value>
+					<value>Belize</value>
+					<value>Benin</value>
+					<value>Bhutan</value>
+					<value>Bolivia</value>
+					<value>Bosnia and Herzegovina</value>
+					<value>Botswana</value>
+					<value>Brazil</value>
+					<value>Brunei</value>
+					<value>Bulgaria</value>
+					<value>Burkina Faso</value>
+					<value>Burma</value>
+					<value>Burundi</value>
+					<value>Cambodia</value>
+					<value>Cameroon</value>
+					<value>Canada</value>
+					<value>Cape Verde</value>
+					<value>Central African Republic</value>
+					<value>Chad</value>
+					<value>Chile</value>
+					<value>China</value>
+					<value>Colombia</value>
+					<value>Comoros</value>
+					<value>Congo, Democratic Republic of the</value>
+					<value>Congo, Republic of the</value>
+					<value>Costa Rica</value>
+					<value>Cote d'Ivoire</value>
+					<value>Croatia</value>
+					<value>Cuba</value>
+					<value>Curacao</value>
+					<value>Cyprus</value>
+					<value>Czech Republic</value>
+					<value>Denmark</value>
+					<value>Djibouti</value>
+					<value>Dominica</value>
+					<value>Dominican Republic</value>
+					<value>Ecuador</value>
+					<value>Egypt</value>
+					<value>El Salvador</value>
+					<value>Equatorial Guinea</value>
+					<value>Eritrea</value>
+					<value>Estonia</value>
+					<value>Ethiopia</value>
+					<value>Fiji</value>
+					<value>Finland</value>
+					<value>France</value>
+					<value>Gabon</value>
+					<value>Gambia, The</value>
+					<value>Georgia</value>
+					<value>Germany</value>
+					<value>Ghana</value>
+					<value>Greece</value>
+					<value>Grenada</value>
+					<value>Guatemala</value>
+					<value>Guinea</value>
+					<value>Guinea-Bissau</value>
+					<value>Guyana</value>
+					<value>Haiti</value>
+					<value>Holy See</value>
+					<value>Honduras</value>
+					<value>Hong Kong</value>
+					<value>Hungary</value>
+					<value>Iceland</value>
+					<value>Indonesia</value>
+					<value>Iran</value>
+					<value>Iraq</value>
+					<value>Ireland</value>
+					<value>Israel</value>
+					<value>Italy</value>
+					<value>Jamaica</value>
+					<value>Japan</value>
+					<value>Jordan</value>
+					<value>Kazakhstan</value>
+					<value>Kenya</value>
+					<value>Kiribati</value>
+					<value>Korea, North</value>
+					<value>Korea, South</value>
+					<value>Kosovo</value>
+					<value>Kuwait</value>
+					<value>Kyrgyzstan</value>
+					<value>Laos</value>
+					<value>Latvia</value>
+					<value>Lebanon</value>
+					<value>Lesotho</value>
+					<value>Liberia</value>
+					<value>Libya</value>
+					<value>Liechtenstein</value>
+					<value>Lithuania</value>
+					<value>Luxembourg</value>
+					<value>Macau</value>
+					<value>Macedonia</value>
+					<value>Madagascar</value>
+					<value>Malawi</value>
+					<value>Malaysia</value>
+					<value>Maldives</value>
+					<value>Mali</value>
+					<value>Malta</value>
+					<value>Marshall Islands</value>
+					<value>Mauritania</value>
+					<value>Mauritius</value>
+					<value>Mexico</value>
+					<value>Micronesia</value>
+					<value>Moldova</value>
+					<value>Monaco</value>
+					<value>Mongolia</value>
+					<value>Montenegro</value>
+					<value>Morocco</value>
+					<value>Mozambique</value>
+					<value>Namibia</value>
+					<value>Nauru</value>
+					<value>Nepal</value>
+					<value>Netherlands</value>
+					<value>Netherlands Antilles</value>
+					<value>New Zealand</value>
+					<value>Nicaragua</value>
+					<value>Niger</value>
+					<value>Nigeria</value>
+					<value>North Korea</value>
+					<value>Norway</value>
+					<value>Pakistan</value>
+					<value>Palau</value>
+					<value>Palestinian Territories</value>
+					<value>Panama</value>
+					<value>Papua New Guinea</value>
+					<value>Paraguay</value>
+					<value>Peru</value>
+					<value>Philippines</value>
+					<value>Poland</value>
+					<value>Portugal</value>
+					<value>Qatar</value>
+					<value>Romania</value>
+					<value>Russia</value>
+					<value>Rwanda</value>
+					<value>Saint Kitts and Nevis</value>
+					<value>Saint Lucia</value>
+					<value>Saint Vincent and the Grenadines</value>
+					<value>Samoa</value>
+					<value>San Marino</value>
+					<value>Sao Tome and Principe</value>
+					<value>Saudi Arabia</value>
+					<value>Senegal</value>
+					<value>Serbia</value>
+					<value>Seychelles</value>
+					<value>Sierra Leone</value>
+					<value>Singapore</value>
+					<value>Sint Maarten</value>
+					<value>Slovakia</value>
+					<value>Slovenia</value>
+					<value>Solomon Islands</value>
+					<value>Somalia</value>
+					<value>South Africa</value>
+					<value>South Korea</value>
+					<value>South Sudan</value>
+					<value>Spain</value>
+					<value>Sri Lanka</value>
+					<value>Sudan</value>
+					<value>Suriname</value>
+					<value>Swaziland</value>
+					<value>Sweden</value>
+					<value>Switzerland</value>
+					<value>Syria</value>
+					<value>Taiwan</value>
+					<value>Tajikistan</value>
+					<value>Tanzania</value>
+					<value>Thailand</value>
+					<value>Timor-Leste</value>
+					<value>Togo</value>
+					<value>Tonga</value>
+					<value>Trinidad and Tobago</value>
+					<value>Tunisia</value>
+					<value>Turkey</value>
+					<value>Turkmenistan</value>
+					<value>Tuvalu</value>
+					<value>Uganda</value>
+					<value>Ukraine</value>
+					<value>United Arab Emirates</value>
+					<value>United Kingdom</value>
+					<value>United States of America</value>
+					<value>Uruguay</value>
+					<value>Uzbekistan</value>
+					<value>Vanuatu</value>
+					<value>Venezuela</value>
+					<value>Vietnam</value>
+					<value>Yemen</value>
+					<value>Zambia</value>
+					<value>Zimbabwe</value>
+				</list>
+			</parameter>
+		</constraint>
+	</constraints>
+
+	<types>
+		<!-- Enterprise-wide generic document type -->
+		<type name="ev:document">
+			<title>EisenVault Document</title>
+			<parent>cm:content</parent>
+			<properties>
+				<!-- Numerical Properties -->
+				<property name="ev:yearOfCreation">
+					<title>Document Year</title>
+					<type>d:long</type>
+					<multiple>false</multiple>
+					<constraints>
+						<constraint ref="ev:yearConstraint" />
+					</constraints>
+				</property>
+
+				<!-- Date Properties -->
+				<property name="ev:dateOfCreation">
+					<title>Document Date</title>
+					<type>d:long</type>
+					<multiple>false</multiple>
+				<constraints>
+						<constraint ref="ev:dateConstraint" />
+					</constraints>
+				
+				
+				</property>
+
+				<!-- List Properties -->
+				<property name="ev:monthOfCreation">
+					<title>Document Month</title>
+					<type>d:text</type>
+					<multiple>false</multiple>
+					<constraints>
+						<constraint ref="ev:nameOfMonthConstraint" />
+					</constraints>
+				</property>
+
+			</properties>
+
+		</type>
+		<type name="ev:goyalMarketingDocument">
+			<title>Marketing Document</title>
+			<parent>ev:document</parent>
+			<properties>
+				<property name="ev:goyalMarketingDocumentType">
+					<title>Type of Document</title>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					
+					<multiple>false</multiple>
+					<constraints>
+						<constraint ref="ev:goyalMarketingDocumentTypes" />
+					</constraints>
+				</property>
+				<property name="ev:goyalCustomerType">
+					<title>Type of Customer</title>
+					<type>d:text</type>
+					<mandatory>true</mandatory>
+					
+					<multiple>false</multiple>
+					<constraints>
+						<constraint ref="ev:goyalCustomerTypes" />
+					</constraints>
+				</property>
+				
+				
+				<property name="ev:goyalCustomerName">
+					<title>Name of Customer</title>
+					<type>d:text</type>
+					               <mandatory>true</mandatory>
+					
+					<multiple>false</multiple>
+					 
+				</property>
+				
+				
+				<property name="ev:goyalCustomerCountry">
+					<title>Country</title>
+					<type>d:text</type>
+					               <mandatory>true</mandatory>
+					
+					<multiple>false</multiple>
+					<constraints>
+						<constraint ref="ev:nameOfCountryConstraint" />
+					</constraints>
+				</property>
+				<property name="ev:goyalCustomerState">
+					<title>State</title>
+					<type>d:text</type>
+					               <mandatory>true</mandatory>
+					
+					<multiple>false</multiple>
+					<constraints>
+						<constraint ref="ev:listOfStatesConstraint" />
+					</constraints>
+				</property>
+				<property name="ev:goyalCustomerCity">
+					<title>City</title>
+					<type>d:text</type>
+					               <mandatory>true</mandatory>
+					
+					<multiple>false</multiple>
+					
+				</property>
+				<property name="ev:goyalCustomerAddress">
+					<title>Address</title>
+					<type>d:text</type>
+					<multiple>false</multiple>
+				</property>
+				<property name="ev:goyalCustomerID">
+					<title>Customer ID</title>
+					<type>d:text</type>
+					<multiple>false</multiple>
+				 
+				</property>
+				<property name="ev:goyalSerialNumber">
+					<title>EisenVault Customer Serial Number</title>
+					<type>d:text</type>
+					               <mandatory>true</mandatory>
+					
+					<multiple>false</multiple>
+					<constraints>
+						<constraint ref="ev:maxLengthOfSixConstraint" />
+					</constraints>
+				</property>
+				<property name="ev:goyalBranchRepresentativeName">
+					<title>Name of Branch or Representative</title>
+					<type>d:text</type>
+					<multiple>false</multiple>
+					 
+				</property>
+			</properties>
+		</type>
+
+
+	</types>
+
+</model>

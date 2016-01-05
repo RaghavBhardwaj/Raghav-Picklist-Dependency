@@ -174,6 +174,36 @@ public class PicklistWebScript extends DeclarativeWebScript {
 						+ ValueAssistanceModel.ASPECT_LEVEL_2.getLocalName()
 						+ "\"");
 				break;
+				
+			case 3:
+				query2.append(" +ASPECT:\""
+						+ ValueAssistanceModel.TSG_VALUE_ASSISTANCE_MODEL_PREFIX
+						+ ":"
+						+ ValueAssistanceModel.ASPECT_LEVEL_3.getLocalName()
+						+ "\"");
+				break;
+				
+			case 4:
+				query2.append(" +ASPECT:\""
+						+ ValueAssistanceModel.TSG_VALUE_ASSISTANCE_MODEL_PREFIX
+						+ ":"
+						+ ValueAssistanceModel.ASPECT_LEVEL_4.getLocalName()
+						+ "\"");
+				break;
+				
+				
+				case 5:
+					query2.append(" +ASPECT:\""
+							+ ValueAssistanceModel.TSG_VALUE_ASSISTANCE_MODEL_PREFIX
+							+ ":"
+							+ ValueAssistanceModel.ASPECT_LEVEL_5.getLocalName()
+							+ "\"");
+					break;
+					
+					
+				
+				
+				
 			default:
 				break;
 			}
@@ -192,6 +222,32 @@ public class PicklistWebScript extends DeclarativeWebScript {
 				LABEL_PROPERTY = ValueAssistanceModel.PROP_LEVEL_2_LABEL;
 				FILTER_PROPERTY = ValueAssistanceModel.PROP_LEVEL_1_VALUE;
 				break;
+				
+			case 3:
+				VALUE_PROPERTY = ValueAssistanceModel.PROP_LEVEL_3_VALUE;
+				LABEL_PROPERTY = ValueAssistanceModel.PROP_LEVEL_3_LABEL;
+				FILTER_PROPERTY = ValueAssistanceModel.PROP_LEVEL_2_VALUE;
+				break;
+				
+			case 4:
+				VALUE_PROPERTY = ValueAssistanceModel.PROP_LEVEL_4_VALUE;
+				LABEL_PROPERTY = ValueAssistanceModel.PROP_LEVEL_4_LABEL;
+				FILTER_PROPERTY = ValueAssistanceModel.PROP_LEVEL_3_VALUE;
+				break;
+				
+				
+			case 5:
+				VALUE_PROPERTY = ValueAssistanceModel.PROP_LEVEL_5_VALUE;
+				LABEL_PROPERTY = ValueAssistanceModel.PROP_LEVEL_5_LABEL;
+				FILTER_PROPERTY = ValueAssistanceModel.PROP_LEVEL_4_VALUE;
+				break;
+				
+				
+				
+				
+				
+				
+				
 			default:
 				break;
 			}
